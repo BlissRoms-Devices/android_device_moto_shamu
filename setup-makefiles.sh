@@ -153,6 +153,7 @@ for apk in `ls $outdir/proprietary/app/*/*apk`; do
     apkname=`basename $apk`
     apkmodulename=`echo $apkname|sed -e 's/\.apk$//gi'`
   if should_presign $apkmodulename; then
+  if [[ $apkmodulename = VZWAPNLib || $apkmodulename = Tycho ]]; then
     signature="PRESIGNED"
   else
     signature="platform"
@@ -267,6 +268,14 @@ for privapk in `ls $outdir/proprietary/priv-app/*/*apk`; do
     privmodulename=`echo $privapkname|sed -e 's/\.apk$//gi'`
   signature="PRESIGNED"
     (cat << EOF) >> $outdir/proprietary/priv-app/Android.mk
+  if [[ $privmodulename = BuaContactAdapter || $privmodulename = GCS ||
+      $privmodulename = MotoSignatureApp || $privmodulename = TriggerEnroll ||
+      $privmodulename = TriggerTrainingService || $privmodulename = VZWAPNService ]]; then
+    signature="PRESIGNED"
+  else
+    signature="platform"
+  fi
+    (cat << EOF) >> ../../../$OUTDIR/proprietary/priv-app/Android.mk
 include \$(CLEAR_VARS)
 LOCAL_MODULE := $privmodulename
 LOCAL_MODULE_TAGS := optional
