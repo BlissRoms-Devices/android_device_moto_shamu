@@ -139,6 +139,12 @@ PRODUCT_PACKAGES += \
     LiveWallpapersPicker \
     librs_jni
 
+# Audio effects 
+PRODUCT_PACKAGES += \
+    libqcomvisualizer \
+    libqcomvoiceprocessing \
+    libqcomvoiceprocessingdescriptors
+     
 PRODUCT_PACKAGES += \
     gralloc.msm8084 \
     hwcomposer.msm8084 \
@@ -188,6 +194,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     fmas.spkr_2ch=35,25 \
     fmas.spkr_angles=10 \
     fmas.spkr_sgain=0 \
+    lpa.decode=false \
+    lpa.releaselock=false \
+    lpa.use-stagefright=false \
+    tunnel.decode=false
 
 PRODUCT_PACKAGES += \
     libqomx_core \
@@ -206,7 +216,11 @@ PRODUCT_PACKAGES += \
 
 # Filesystem management tools
 PRODUCT_PACKAGES += \
-    e2fsck
+    e2fsck \
+    fsck.f2fs \
+    mkfs.f2fs \
+    setup_fs
+
 
 # for off charging mode
 PRODUCT_PACKAGES += \
@@ -225,12 +239,21 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     librmnetctl \
     libxml2
+PRODUCT_PROPERTY_OVERRIDES += \
+    adb.secure=0
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    selinux=permissive
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.sf.lcd_density=560 \
+    persist.sys.lcd_density=532
+ 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.opengles.version=196609
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sf.lcd_density=560
+    persist.sys.isUsbOtgEnabled=1
 
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.hwc.mdpcomp.enable=true
