@@ -197,7 +197,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     lpa.decode=false \
     lpa.releaselock=false \
     lpa.use-stagefright=false \
-    tunnel.decode=false
+    tunnel.decode=false \
+    audio.deep_buffer.media=false \
+    tunnel.audiovideo.decode=false \
+    persist.sys.media.use-awesome=1
 
 PRODUCT_PACKAGES += \
     libqomx_core \
@@ -239,11 +242,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     librmnetctl \
     libxml2
-PRODUCT_PROPERTY_OVERRIDES += \
-    adb.secure=0
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    selinux=permissive
+    ro.adb.secure=0
+
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=560 \
