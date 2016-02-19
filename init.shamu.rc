@@ -531,8 +531,8 @@ service adspd /system/bin/adspd /dev/ttyHS3
    user media
    group media input
 
-on property:sys.boot_completed=1
-    start qcom-post-boot
+# on property:sys.boot_completed=1
+#    start qcom-post-boot
 
 on property:ro.debuggable=1
     start ss_ramdump
