@@ -158,7 +158,7 @@ Bliss_Build_Block:=1
 BLISSIFY := true
 BLISS_O3 := true
 BLISS_GRAPHITE := true
-#BLISS_STRICT := true
+BLISS_STRICT := true
 BLISS_KRAIT := true
 BLISS_PIPE := true
 FLOOP_NEST_OPTIMIZE := true
@@ -174,7 +174,22 @@ TARGET_TC_ROM := 5.3-linaro
 TARGET_TC_KERNEL := 5.3-linaro
 TARGET_GCC_VERSION_EXP := $(TARGET_TC_ROM)
 TARGET_KERNEL_CUSTOM_TOOLCHAIN := $(TARGET_TC_KERNEL)
-TARGET_ENABLE_UKM := true
+
+
+
+ifneq ($(filter 5.% 6.%,$(TARGET_TC_ROM)),)
+ifeq ($(strip $(BLISS_GRAPHITE)),true)
+  LOCAL_DISABLE_GRAPHITE := \
+    camera.hammerhead
+endif
+endif
+
+ifeq ($(strip $(BLISS_STRICT)),true)
+  LOCAL_DISABLE_STRICT := \
+    libmmcamera_interface \
+    camera.shamu
+endif
+
 
 #WITH_LZMA_OTA := true
 #SaberMod
