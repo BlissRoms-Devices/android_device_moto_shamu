@@ -202,6 +202,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     tunnel.audiovideo.decode=false \
     persist.sys.media.use-awesome=1
 
+# Snap Config
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.camera.cpp.duplication=false
+
 PRODUCT_PACKAGES += \
     libqomx_core \
     libmm-qcamera \
