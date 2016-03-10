@@ -209,7 +209,8 @@ PRODUCT_PACKAGES += \
     libmmjpeg_interface \
     camera.msm8084 \
     mm-jpeg-interface-test \
-    mm-qcamera-app
+    mm-qcamera-app \
+    Snap
 
 PRODUCT_PACKAGES += \
     libion
