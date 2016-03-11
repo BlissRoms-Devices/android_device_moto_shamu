@@ -247,6 +247,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.adb.secure=0
 
+PRODUCT_PROPERTIES_OVERRIDES \
+    ro.build.user=blueyes
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=560 \
