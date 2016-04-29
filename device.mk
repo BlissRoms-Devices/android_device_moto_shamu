@@ -245,12 +245,6 @@ PRODUCT_PACKAGES += \
     libxml2
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.adb.secure=0
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.build.user=blueyes
-
-PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=560 \
     persist.sys.lcd_density=532
  
