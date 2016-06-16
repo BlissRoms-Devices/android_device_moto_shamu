@@ -202,6 +202,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     tunnel.audiovideo.decode=false \
     persist.sys.media.use-awesome=1
 
+PRODUCT_PACKAGES += \
+    Gello
+
 # Snap Config
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.cpp.duplication=false
