@@ -24,8 +24,6 @@ ENABLE_CPUSETS := true
 
 TARGET_NO_BOOTLOADER := true
 
-WITH_DEXPREOPT := true
-
 # Inline kernel building
 TARGET_KERNEL_CONFIG := B14CKB1RD_defconfig
 TARGET_KERNEL_SOURCE := kernel/moto/shamu
@@ -71,7 +69,7 @@ WIFI_DRIVER_FW_PATH_STA     := "/vendor/firmware/fw_bcmdhd.bin"
 WIFI_BUS := PCIE
 #BOARD_USES_SECURE_SERVICES := true
 
-#Bluetooth defines
+# Bluetooth defines
 BOARD_HAVE_BLUETOOTH_BCM := true
 ifeq ($(TARGET_PRODUCT),bt_shamu)
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/moto/shamu/bluetooth_extra
@@ -94,7 +92,6 @@ TARGET_HW_DISK_ENCRYPTION := false
 TARGET_CRYPTFS_HW_PATH := device/moto/shamu/cryptfs_hw
 
 # Enable dex-preoptimization to speed up first boot sequence
-
 WITH_DEXPREOPT := true
 WITH_DEXPREOPT_PIC :=true
 WITH_DEXPREOPT_COMP :=true
@@ -154,10 +151,8 @@ USE_CLANG_PLATFORM_BUILD := true
 
 -include vendor/motorola/shamu/BoardConfigVendor.mk
 
-# Block_Build
-Bliss_Build_Block:=1
-
-# Blissful building options
+# Blissful Building Options
+BLISS_BUILD_BLOCK := 1
 BLISSIFY := true
 BLISS_O3 := true
 BLISS_GRAPHITE := true
@@ -177,12 +172,11 @@ ENABLE_LTO := true
 LINK_TIME_OPTIMIZATIONS := true
 TARGET_USE_ION_COMPAT := true
 TARGET_USE_KRAIT_PLD_SET := true
+#WITH_LZMA_OTA := true
 TARGET_TC_ROM := 5.x-HYPER-uber
 TARGET_TC_KERNEL := 6.x-HYPER-uber
 TARGET_GCC_VERSION_EXP := $(TARGET_TC_ROM)
 TARGET_KERNEL_CUSTOM_TOOLCHAIN := $(TARGET_TC_KERNEL)
-
-
 
 ifneq ($(filter 5.% 6.%,$(TARGET_TC_ROM)),)
 ifeq ($(strip $(BLISS_GRAPHITE)),true)
@@ -196,7 +190,3 @@ ifeq ($(strip $(BLISS_STRICT)),true)
     libmmcamera_interface \
     camera.shamu
 endif
-
-
-#WITH_LZMA_OTA := true
-#SaberMod
