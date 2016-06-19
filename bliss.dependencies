@@ -1,7 +1,7 @@
 
 [
   {
-    "repository": "B14CKB1RD-Kernel/BlissRoms-Kernels/android_Kernel_shamu",
+    "repository": "BlissRoms-Kernels/android_Kernel_shamu",
     "target_path": "kernel/moto/shamu",
     "remote": "github",	
     "revision": "mm6.0"
