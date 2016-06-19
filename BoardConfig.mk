@@ -27,7 +27,7 @@ TARGET_NO_BOOTLOADER := true
 WITH_DEXPREOPT := true
 
 # Inline kernel building
-TARGET_KERNEL_CONFIG := B14CKB1RD_defconfig
+TARGET_KERNEL_CONFIG := elementalx_defconfig
 TARGET_KERNEL_SOURCE := kernel/moto/shamu
 BOARD_KERNEL_IMAGE_NAME := zImage-dtb
 
