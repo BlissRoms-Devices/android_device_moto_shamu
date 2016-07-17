@@ -94,10 +94,7 @@ TARGET_HW_DISK_ENCRYPTION := false
 TARGET_CRYPTFS_HW_PATH := device/moto/shamu/cryptfs_hw
 
 # Enable dex-preoptimization to speed up first boot sequence
-WITH_DEXPREOPT := true
-WITH_DEXPREOPT_PIC :=true
-WITH_DEXPREOPT_COMP :=true
-DONT_DEXPREOPT_PREBUILTS := true
+WITH_DEXPREOPT := false
 
 TARGET_TOUCHBOOST_FREQUENCY := 1500
 TARGET_USERIMAGES_USE_EXT4 := true
