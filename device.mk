@@ -377,6 +377,10 @@ PRODUCT_PACKAGES += \
     liblbs_core \
     flp.conf
 
+# Gello
+PRODUCT_PACKAGES += \
+    Gello
+
 # NFC packages
 PRODUCT_PACKAGES += \
     com.android.nfc_extras \
@@ -455,6 +459,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Low latency audio buffer size in frames
 PRODUCT_PROPERTY_OVERRIDES += \
     audio_hal.period_size=192
+
 
 # set default USB configuration
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
