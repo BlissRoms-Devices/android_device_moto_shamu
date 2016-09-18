@@ -10,5 +10,5 @@
     "target_path": "vendor/moto",
     "remote":      "github",
     "revision":    "master"
-  },
+  }
 ]
