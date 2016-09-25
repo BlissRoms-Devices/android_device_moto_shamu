@@ -130,5 +130,6 @@ USE_CLANG_PLATFORM_BUILD := true
 
 # Disable dex-preopt of prebuilts to save space.
 DONT_DEXPREOPT_PREBUILTS := true
+WITH_DEXPREOPT := false
 
 -include vendor/moto/shamu/BoardConfigVendor.mk
