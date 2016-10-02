@@ -10,11 +10,5 @@
     "target_path": "vendor/moto",
     "remote":      "github",
     "revision":    "master"
-  },
-  {
-    "repository":  "platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8",
-    "target_path": "prebuilts/gcc/linux-x86/arm/arm-eabi-4.8",
-    "remote":      "aosp",
-    "revision":    "master"
   }
 ]
