@@ -1,0 +1,15 @@
+[
+  {
+    "repository":  "kernel/msm",
+    "target_path": "kernel/moto/shamu",
+    "remote":      "aosp",
+    "revision":    "android-msm-shamu-3.10-nougat-mr1.2"
+  },
+
+  {
+    "repository":  "AOSiP-Devices/platform_vendor_moto",
+    "target_path": "vendor/moto",
+    "remote":      "github",
+    "revision":    "n7x"
+  }
+]
