@@ -1,9 +1,9 @@
 [
   {
-    "repository":  "kernel/msm",
+    "repository":  "BlissRoms-Kernels/android_kernel_moto_shamu",
     "target_path": "kernel/moto/shamu",
-    "remote":      "aosp",
-    "revision":    "android-msm-shamu-3.10-nougat-mr1.5"
+    "remote":      "github",
+    "revision":    "n7.1"
   },
 
   {
