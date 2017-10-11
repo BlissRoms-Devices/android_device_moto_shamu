@@ -194,4 +194,4 @@
 
 # Sysfs files used by gralloc hal
 /sys/devices/virtual/graphics/fb[0-1]/msm_.*        u:object_r:sysfs_hal_gralloc:s0
-/sys/devices/soc.0/fd900000.qcom,mdss_mdp/caps      u:object_r:sysfs_hal_gralloc:s0
+/sys/devices/fd900000.qcom,mdss_mdp/caps            u:object_r:sysfs_hal_gralloc:s0
