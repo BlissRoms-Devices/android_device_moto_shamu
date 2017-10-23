@@ -1,4 +1,4 @@
-#
+#ts
 # Copyright (C) 2014 The Android Open-Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -224,6 +224,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libion
 
+# Light
+PRODUCT_PACKAGES += \
+    android.hardware.light@2.0-service.shamu
+    
 # Filesystem management tools
 PRODUCT_PACKAGES += \
     e2fsck
