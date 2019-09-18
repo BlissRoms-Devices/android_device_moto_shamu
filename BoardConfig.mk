@@ -137,7 +137,7 @@ BOARD_VENDOR_QCOM_LOC_PDK_FEATURE_SET := true
 BOARD_HAS_AUDIO_DSP := true
 
 # Manifests
-DEVICE_FRAMEWORK_MANIFEST_FILE += system/libhidl/vintfdata/manifest_healthd_exclude.xml
+DEVICE_FRAMEWORK_MANIFEST_FILE += device/moto/shamu/manifests/manifest_healthd_exclude.xml
 DEVICE_MANIFEST_FILE := device/moto/shamu/manifests/manifest.xml
 DEVICE_MATRIX_FILE := device/moto/shamu/manifests/compatibility_matrix.xml
 
